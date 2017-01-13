@@ -16,6 +16,14 @@ static void *MASObservingContext = &MASObservingContext;
 - (void) awakeFromNib
 {
     [super awakeFromNib];
+    
+    /**
+     MASShortcutViewStyleDefault = 0,  // Height = 19 px
+     MASShortcutViewStyleTexturedRect, // Height = 25 px
+     MASShortcutViewStyleRounded,      // Height = 43 px
+     MASShortcutViewStyleFlat
+     */
+    [self.customShortcutView setStyle:MASShortcutViewStyleRounded];
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
