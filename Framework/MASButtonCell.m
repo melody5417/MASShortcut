@@ -21,9 +21,9 @@
         CGFloat originY = titleRect.origin.y;
         CGFloat originX = rect.origin.x + rect.size.width - titleSize.width - 15;
         return NSMakeRect(originX, originY, titleSize.width, titleSize.height);
-    } else {
-        return titleRect;
     }
+    
+    return [super titleRectForBounds:rect];
 }
 
 @end
