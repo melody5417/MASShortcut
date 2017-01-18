@@ -18,6 +18,9 @@ FourCharCode const MASHotKeySignature = 'MASS';
     _carbonID = ++CarbonHotKeyID;
     EventHotKeyID hotKeyID = { .signature = MASHotKeySignature, .id = _carbonID };
 
+    // melody：快捷键注册规则
+    // 0：快捷键组合已被占用 仍可注册成功
+    // 1: 快捷键组合已被占用 再次注册失败
     OSStatus status = RegisterEventHotKey([shortcut carbonKeyCode], [shortcut carbonFlags],
         hotKeyID, GetEventDispatcherTarget(), 0, &_hotKeyRef);
 

@@ -657,7 +657,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <customView misplaced="YES" id="536" customClass="MASShortcutView">
-                        <rect key="frame" x="142" y="90" width="158" height="25"/>
+                        <rect key="frame" x="142" y="90" width="207" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="PG0-jh-Onh">

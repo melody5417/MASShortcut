@@ -23,7 +23,7 @@ static void *MASObservingContext = &MASObservingContext;
      MASShortcutViewStyleRounded,      // Height = 43 px
      MASShortcutViewStyleFlat
      */
-    [self.customShortcutView setStyle:MASShortcutViewStyleRounded];
+    [self.customShortcutView setStyle:MASShortcutViewStyleTexturedRect];
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 

@@ -1,6 +1,7 @@
 #import "MASShortcutView.h"
 #import "MASShortcutValidator.h"
 #import "MASLocalization.h"
+#import "MASButtonCell.h"
 
 NSString *const MASShortcutBinding = @"shortcutValue";
 
@@ -20,7 +21,7 @@ static const CGFloat MASButtonFontSize = 11;
 #pragma mark -
 
 @implementation MASShortcutView {
-    NSButtonCell *_shortcutCell;
+    MASButtonCell *_shortcutCell;
     NSInteger _shortcutToolTipTag;
     NSInteger _hintToolTipTag;
     NSTrackingArea *_hintArea;
@@ -31,7 +32,7 @@ static const CGFloat MASButtonFontSize = 11;
 
 + (Class)shortcutCellClass
 {
-    return [NSButtonCell class];
+    return [MASButtonCell class];
 }
 
 - (id)initWithFrame:(CGRect)frameRect
@@ -188,25 +189,30 @@ static const CGFloat MASButtonFontSize = 11;
     _shortcutCell.alignment = alignment;
     _shortcutCell.state = state;
     _shortcutCell.enabled = self.enabled;
-
-    switch (_style) {
-        case MASShortcutViewStyleDefault: {
-            [_shortcutCell drawWithFrame:frame inView:self];
-            break;
-        }
-        case MASShortcutViewStyleTexturedRect: {
-            [_shortcutCell drawWithFrame:CGRectOffset(frame, 0.0, 1.0) inView:self];
-            break;
-        }
-        case MASShortcutViewStyleRounded: {
-            [_shortcutCell drawWithFrame:CGRectOffset(frame, 0.0, 1.0) inView:self];
-            break;
-        }
-        case MASShortcutViewStyleFlat: {
-            [_shortcutCell drawWithFrame:frame inView:self];
-            break;
-        }
-    }
+    
+    // melody
+    _shortcutCell.style = _style;
+    
+    // melody
+    [_shortcutCell drawWithFrame:frame inView:self];
+//    switch (_style) {
+//        case MASShortcutViewStyleDefault: {
+//            [_shortcutCell drawWithFrame:frame inView:self];
+//            break;
+//        }
+//        case MASShortcutViewStyleTexturedRect: {
+//            [_shortcutCell drawWithFrame:CGRectOffset(frame, 0.0, 1.0) inView:self];
+//            break;
+//        }
+//        case MASShortcutViewStyleRounded: {
+//            [_shortcutCell drawWithFrame:CGRectOffset(frame, 0.0, 1.0) inView:self];
+//            break;
+//        }
+//        case MASShortcutViewStyleFlat: {
+//            [_shortcutCell drawWithFrame:frame inView:self];
+//            break;
+//        }
+//    }
 }
 
 - (void)drawRect:(CGRect)dirtyRect

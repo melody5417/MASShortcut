@@ -44,6 +44,8 @@
 		0DC2F190199372B4003A0131 /* MASDictionaryTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC2F18F199372B4003A0131 /* MASDictionaryTransformerTests.m */; };
 		0DC2F19819938EFA003A0131 /* MASShortcutView+Bindings.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DC2F19619938EFA003A0131 /* MASShortcutView+Bindings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0DC2F19919938EFA003A0131 /* MASShortcutView+Bindings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC2F19719938EFA003A0131 /* MASShortcutView+Bindings.m */; };
+		4FDFD33B1E2F18310005A741 /* MASButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FDFD3391E2F18310005A741 /* MASButtonCell.h */; };
+		4FDFD33C1E2F18310005A741 /* MASButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDFD33A1E2F18310005A741 /* MASButtonCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +127,8 @@
 		0DC2F19619938EFA003A0131 /* MASShortcutView+Bindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MASShortcutView+Bindings.h"; path = "Framework/MASShortcutView+Bindings.h"; sourceTree = "<group>"; };
 		0DC2F19719938EFA003A0131 /* MASShortcutView+Bindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MASShortcutView+Bindings.m"; path = "Framework/MASShortcutView+Bindings.m"; sourceTree = "<group>"; };
 		0DEDAA021C6BB479001605F5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4FDFD3391E2F18310005A741 /* MASButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASButtonCell.h; path = Framework/MASButtonCell.h; sourceTree = "<group>"; };
+		4FDFD33A1E2F18310005A741 /* MASButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MASButtonCell.m; path = Framework/MASButtonCell.m; sourceTree = "<group>"; };
 		4FE4CBA11E28DAD9007191D3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4FE4CBA21E28DADB007191D3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6EA6034E1CBF822000A3ED9C /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -261,6 +265,8 @@
 				0D827D221990D55E0010B8EF /* MASShortcutView.m */,
 				0DC2F19619938EFA003A0131 /* MASShortcutView+Bindings.h */,
 				0DC2F19719938EFA003A0131 /* MASShortcutView+Bindings.m */,
+				4FDFD3391E2F18310005A741 /* MASButtonCell.h */,
+				4FDFD33A1E2F18310005A741 /* MASButtonCell.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -302,6 +308,7 @@
 				0D827D9719910FF70010B8EF /* MASKeyCodes.h in Headers */,
 				0D827D2B1990D55E0010B8EF /* MASShortcutView.h in Headers */,
 				0D827D99199110F60010B8EF /* Prefix.pch in Headers */,
+				4FDFD33B1E2F18310005A741 /* MASButtonCell.h in Headers */,
 				0D827D251990D55E0010B8EF /* MASShortcut.h in Headers */,
 				0DC2F19819938EFA003A0131 /* MASShortcutView+Bindings.h in Headers */,
 				0D827D9E19911A190010B8EF /* MASShortcutValidator.h in Headers */,
@@ -455,6 +462,7 @@
 				0D827D261990D55E0010B8EF /* MASShortcut.m in Sources */,
 				0DC2F18E1993708A003A0131 /* MASDictionaryTransformer.m in Sources */,
 				0D2CAB1A1B8339F4005431FC /* MASLocalization.m in Sources */,
+				4FDFD33C1E2F18310005A741 /* MASButtonCell.m in Sources */,
 				0DC2F19919938EFA003A0131 /* MASShortcutView+Bindings.m in Sources */,
 				0DC2F17D199232F7003A0131 /* MASShortcutBinder.m in Sources */,
 			);
