@@ -21,11 +21,13 @@ extern NSString *const JTHotKeyFlags;
 
 /** 截图快捷键
  * 默认值为 control + cmd + A ⌘⌃A modifierFlags = 1310720 keyCode = 0;
+ * modifierFlags -1 keyCode -1为空的快捷键 
+ * 用以区分是用户手动删除 还是 首次启动加载默认值
  */
 @property (nonatomic, strong) NSDictionary *captureHotKey;
 /** 录屏快捷键
  * 默认值为 ⌘⌃R modifierFlags = 1310720 keyCode = 15;
- * modifierFlags -1 keyCode -1为空的快捷键
+ * 用以区分是用户手动删除 还是 首次启动加载默认值
  */
 @property (nonatomic, strong) NSDictionary *recordHotKey;
 

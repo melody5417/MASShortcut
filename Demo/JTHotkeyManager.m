@@ -90,4 +90,31 @@
     }
 }
 
++ (NSString *)stringValueOfHotkeyType:(JTHotkeyType)type {
+  NSInteger keyCode = -1;
+  NSInteger flags = -1;
+  
+  switch (type) {
+    case JTHotkeyTypeRecord:
+      keyCode = [[[[JTSetting defaultSetting] recordHotKey] objectForKey:JTHotKeyKeyCode] unsignedIntegerValue];
+      flags = [[[[JTSetting defaultSetting] recordHotKey] objectForKey:JTHotKeyFlags] unsignedIntegerValue];
+      break;
+      
+    case JTHotkeyTypeCapture:
+      keyCode = [[[[JTSetting defaultSetting] captureHotKey] objectForKey:JTHotKeyKeyCode] unsignedIntegerValue];
+      flags = [[[[JTSetting defaultSetting] captureHotKey] objectForKey:JTHotKeyFlags] unsignedIntegerValue];
+      break;
+      
+    default:
+      break;
+  }
+  
+  if (keyCode!= -1 && flags!= -1) {
+    MASShortcut *shortcut = [MASShortcut shortcutWithKeyCode:keyCode modifierFlags:flags];
+    return [NSString stringWithFormat:@"%@", shortcut];
+  }
+  
+  return nil;
+}
+
 @end

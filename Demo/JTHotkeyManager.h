@@ -29,4 +29,7 @@ typedef NS_ENUM(NSUInteger, JTHotkeyType) {
 - (void)unregisterHotKeyType:(JTHotkeyType)type
                   completion:(void(^)(NSError *error))completion ;
 
+/** 获取对应快捷键的string */
++ (NSString *)stringValueOfHotkeyType:(JTHotkeyType)type;
+
 @end
