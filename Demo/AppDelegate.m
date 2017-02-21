@@ -42,6 +42,7 @@ static NSString *const MASHardcodedShortcutEnabledKey = @"hardcodedShortcutEnabl
       [self.captureShortcutView setShortcutValue:shortcut];
       
       // 启动时注册快捷键
+      // 这个demo比较特殊 直接写在delegate里 一般情况可以notification通知到delegate
       [self registerHotKey:shortcut forHotKeyType:JTHotkeyTypeCapture];
     }
   }
